@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -44,4 +45,4 @@ async def on_raw_reaction_remove(payload):
         else:
             print("Role not found")
 
-client.run(os.eviron['DISCORD_TOKEN'])
+client.run(os.environ['DISCORD_TOKEN'])
