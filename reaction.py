@@ -4,14 +4,15 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix = '.')
 
-@client.command(aliases=['ping', 'latency', 'ms'])
+@client.command(aliases=['latency', 'ms'])
 async def ping(ctx):
-    await ctx.send(f'Returned in {round(client.latency * 1000)}ms')
+    await ctx.send(f'Returned in {round(client.latency * 1000)}ms.')
 
-@client.command(aliases=['update', 'changeavatar'])
-async def update():
+@client.command(aliases=['avatar'])
+async def update(ctx):
     with open('react.png', 'rb') as f:
         await client.user.edit(avatar=f.read())
+        await ctx.send(f'Updated avatar.')
 
 @client.event
 async def on_ready():
@@ -55,4 +56,5 @@ async def on_raw_reaction_remove(payload):
         else:
             print("Role not found")
 
-client.run(os.environ['DISCORD_TOKEN'])
+#client.run(os.environ['DISCORD_TOKEN'])
+client.run('NzU2MzAyNTMxMTUxMzk2OTg2.X2P3ng.vXoDwrCeXJexEsVpdn0lfZ5zMrw')
