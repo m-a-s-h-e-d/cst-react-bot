@@ -44,4 +44,4 @@ async def on_raw_reaction_remove(payload):
         else:
             print("Role not found")
 
-client.run('NzU2MzAyNTMxMTUxMzk2OTg2.X2P3ng.vXoDwrCeXJexEsVpdn0lfZ5zMrw')
+client.run(os.eviron['DISCORD_TOKEN'])
