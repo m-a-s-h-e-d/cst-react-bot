@@ -1,7 +1,17 @@
 import discord
 import os
+from discord.ext import commands
 
-client = discord.Client()
+client = commands.Bot(command_prefix = '.')
+
+@client.command(aliases=['ping', 'latency', 'ms'])
+async def ping(ctx):
+    await ctx.send(f'Returned in {round(client.latency * 1000)}ms')
+
+@client.command(aliases=['update', 'changeavatar'])
+async def update():
+    with open('react.png', 'rb') as f:
+        await client.user.edit(avatar=f.read())
 
 @client.event
 async def on_ready():
