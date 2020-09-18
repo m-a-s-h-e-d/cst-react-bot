@@ -17,6 +17,11 @@ async def update():
 async def on_ready():
     print("Logged in.")
 
+@client.command(aliases-['update'])
+async def _update():
+    with open('react.png', 'rb') as f:
+        await client.edit_profile(avatar=f.read())
+    
 @client.event
 async def on_raw_reaction_add(payload):
     message_id = payload.message_id
