@@ -2,7 +2,10 @@ import discord
 import os
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = '.')
+intents = discord.Intents.default()
+intents.members = True
+
+client = commands.Bot(command_prefix = '.', intents=intents)
 
 @client.command(aliases=['latency', 'ms'])
 async def ping(ctx):
@@ -86,4 +89,5 @@ async def on_raw_reaction_remove(payload):
         else:
             print("Role not found")
 
-client.run(os.environ['DISCORD_TOKEN'])
+client.run('NzU2MzAyNTMxMTUxMzk2OTg2.X2P3ng.vXoDwrCeXJexEsVpdn0lfZ5zMrw')
+# client.run(os.environ['DISCORD_TOKEN'])
