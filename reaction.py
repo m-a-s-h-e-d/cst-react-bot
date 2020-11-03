@@ -29,17 +29,17 @@ async def on_raw_reaction_add(payload):
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
 
         if payload.emoji.name == 'regional_indicator_a':
-            role = discord.utils.get(guild.roles, name='a')
+            role = discord.utils.get(guild.roles, name='Set A')
         elif payload.emoji.name == 'regional_indicator_b':
-            role = discord.utils.get(guild.roles, name='b')
+            role = discord.utils.get(guild.roles, name='Set B')
         elif payload.emoji.name == 'regional_indicator_c':
-            role = discord.utils.get(guild.roles, name='c')
+            role = discord.utils.get(guild.roles, name='Set C')
         elif payload.emoji.name == 'regional_indicator_d':
-            role = discord.utils.get(guild.roles, name='d')
+            role = discord.utils.get(guild.roles, name='Set D')
         elif payload.emoji.name == 'regional_indicator_e':
-            role = discord.utils.get(guild.roles, name='e')
+            role = discord.utils.get(guild.roles, name='Set E')
         elif payload.emoji.name == 'regional_indicator_f':
-            role = discord.utils.get(guild.roles, name='f')
+            role = discord.utils.get(guild.roles, name='Set F')
         else:
             role = discord.utils.get(guild.roles, name=payload.emoji.name)
 
@@ -61,17 +61,17 @@ async def on_raw_reaction_remove(payload):
         guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
 
         if payload.emoji.name == 'regional_indicator_a':
-            role = discord.utils.get(guild.roles, name='a')
+            role = discord.utils.get(guild.roles, name='Set A')
         elif payload.emoji.name == 'regional_indicator_b':
-            role = discord.utils.get(guild.roles, name='b')
+            role = discord.utils.get(guild.roles, name='Set B')
         elif payload.emoji.name == 'regional_indicator_c':
-            role = discord.utils.get(guild.roles, name='c')
+            role = discord.utils.get(guild.roles, name='Set C')
         elif payload.emoji.name == 'regional_indicator_d':
-            role = discord.utils.get(guild.roles, name='d')
+            role = discord.utils.get(guild.roles, name='Set D')
         elif payload.emoji.name == 'regional_indicator_e':
-            role = discord.utils.get(guild.roles, name='e')
+            role = discord.utils.get(guild.roles, name='Set E')
         elif payload.emoji.name == 'regional_indicator_f':
-            role = discord.utils.get(guild.roles, name='f')
+            role = discord.utils.get(guild.roles, name='Set F')
         else:
             role = discord.utils.get(guild.roles, name=payload.emoji.name)
 
